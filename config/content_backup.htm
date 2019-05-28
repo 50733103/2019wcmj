@@ -227,18 +227,23 @@ function draw2mid() {
 <p><a href="http://cpgx.kmol.info/wcm2019/content/index.html">http://cpgx.kmol.info/wcm2019/content/index.html</a></p>
 <h1>ROC Flag</h1>
 <p></p>
-<!-- 導入 Brython 標準程式庫 -->
+<p><span style="color: #0000ff;">需修改事項:將自己倉儲內的"flaskapp.py"內的程式進行修改並儲存國旗才可以顯現出來</span></p>
+<p><span style="color: #0000ff;">出現錯誤:若利用Edit All來編輯網頁的話,儲存後可能會出現以下錯誤<img alt="" height="488" src="/images/chrome_SqwlCxADnp.png" width="1000"/></span></p>
+<p><!-- 導入 Brython 標準程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
-<p></p>
-<!-- 啟動 Brython -->
+</p>
+<p><span style="color: #0000ff;">建議只利用Edit來編輯網頁及儲存變更即可,或是直接整個複製貼上老師的flaskapp.py的最新版本,最新的版本由這來看:<a href="https://scrum-4.github.io/2019wcmj/content/ROC%20Flag.html">https://scrum-4.github.io/2019wcmj/content/ROC%20Flag.html</a></span></p>
+<p><!-- 啟動 Brython -->
 <script>
 window.onload=function(){
 // 設定 data/py 為共用程式路徑
 brython({debug:1, pythonpath:['./../data/py']});
 }
 </script>
+</p>
 <p><canvas height="400" id="plotarea" width="600"></canvas></p>
+<p>
 <script type="text/python">
 # 導入 doc
 from browser import document as doc
@@ -292,6 +297,7 @@ ctx.closePath()
 ctx.fillStyle = '#fff'
 ctx.fill()
 </script>
+</p>
 <p><br/>繪圖 &lt;&lt; <a href="/繪圖.html">Previous</a> <a href="/Spur Gears.html">Next</a> &gt;&gt; Spur Gears</p>
 <div class="container">
 <div class="row pt-3 mx-auto">
@@ -363,9 +369,9 @@ All rights reserved | This template is made with <i aria-hidden="true" class="ic
 </div>
 </div>
 <!-- for footer --></div>
-<!-- for site wrap -->
+<p><!-- for site wrap --></p>
 <p></p>
-<!-- <script src="../static/chimper/js/jquery-3.3.1.min.js"></script> -->
+<p><!-- <script src="../static/chimper/js/jquery-3.3.1.min.js"></script> -->
 <script src="/get_page/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
 <script src="/get_page/static/chimper/js/jquery-ui.js"></script>
 <script src="/get_page/static/chimper/js/popper.min.js"></script>
@@ -376,7 +382,9 @@ All rights reserved | This template is made with <i aria-hidden="true" class="ic
 <script src="/get_page/static/chimper/js/jquery.magnific-popup.min.js"></script>
 <script src="/get_page/static/chimper/js/bootstrap-datepicker.min.js"></script>
 <script src="/get_page/static/chimper/js/aos.js"></script>
+</p>
 <p>&lt;!--</p>
+<p>
 <script src="/get_page/static/chimper/js/typed.js"></script>
 <script>
 var typed = new Typed('.typed-words', {
@@ -389,7 +397,7 @@ var typed = new Typed('.typed-words', {
                     showCursor: true
                     });
 </script>
-<h1>W15虎科大VPN設定</h1>
+</p><h1>W15虎科大VPN設定</h1>
 <p>安裝完並開啟SSL VPN程式(Juniper Networks Connect<img alt="" height="192" src="/images/Network_Connect_for__64_bit__Windows__8_0R5_ydIom4NN3V.png" width="300"/></p>
 <p>點擊Network Connect</p>
 <p><img alt="" height="400" src="/images/chrome_NbmGPWyhCh.png" width="245"/></p>
