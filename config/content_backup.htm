@@ -4,14 +4,14 @@
 <div class="line number1 index0 alt2"><code class="html plain"></code></div>
 <p><button onclick="myFunction()">按一下</button></p>
 <p id="demo"></p>
-<script>// <![CDATA[
+<script>
 // <![CDAIA[
 function myFunction() {
   document.getElementById("demo").innerHTML = Math.floor(Math.random()*50+1);
  //document.getElementById("demo").innerHTML ="不要亂按";
  //alert("啊~~~~~~~~~");
 }
-// ]]></script>
+</script>
 <div class="line number1 index0 alt2">
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;p&gt;&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;&lt;/p&gt;
 &lt;p id="demo"&gt;&lt;/p&gt;
@@ -213,6 +213,7 @@ function draw2mid() {
 <p><img alt="" height="161" src="/images/cmd_y5l3twqK1F.png" width="400"/></p>
 <p>Github Pages - setting, url</p>
 <p>local python wsgi.py</p>
+<p><img alt="" height="142" src="/images/cmd_Tswcc8VFxs.png" width="500"/></p>
 <p>ssh vs https (y:\home\.ssh\config)</p>
 <p>.git/config (url =<span> </span><a href="mailto:git@github.com:scrum-4/2019wcmj.git">git@github.com:scrum-4/2019wcmj.git</a>)</p>
 </div><h2>網路連線設定</h2>
@@ -220,10 +221,9 @@ function draw2mid() {
 <h2>配置可攜程式環境</h2>
 <p><span>取得 Windows 10 64 位元環境下的可攜程式環境 (下載  2019_cdb_w5.7z), 下載後解開目錄, 放入 USB3.0 規格以上的隨身碟或隨身硬碟.</span><br/><br/><span>以滑鼠點擊 start.bat 開啟可攜隨身系統, 以 stop.bat 關閉可攜隨身系統, 隨身碟必須在關閉所有應用程式執行下, 才可正常退出.</span><br/><br/><span>了解基本的 DOS (Disk Operating System) 指令</span><br/><br/><span>C:\&gt; 符號為 DOS 命令列視窗的回應 (Prompt), 表示目前在 C 槽硬碟的 \ 根目錄, 若要切換到 Y 槽, 則在電腦的回應後, 輸入 Y:, 命令列將轉為</span><br/><br/><span>Y:\&gt;</span><br/><br/><span>若要更換目錄, 則使用 cd, 也就是 change directory 的意思, 例如:</span><br/><br/><span>Y:\&gt;cd tmp</span><br/><br/><span>表示要從 Y 槽的根目錄更換到 tmp 目錄, 也就是</span><br/><br/><span>Y:\tmp&gt;</span><br/><br/><span>若要再回到 Y 槽的根目錄, 可以使用 cd ..</span><br/><br/><span>表示要從目前所在目錄, 往上跳回一個目錄, 也就是重新回到 Y 槽的根目錄.</span><br/><br/><span>另外, 無論目前位於哪一個子目錄, 也可以使用 cd \</span><br/><br/><span>直接回到根目錄.</span><br/><br/><span>或者從 Y:\&gt; 直接使用</span><br/><br/><span>cd \tmp\repo\ssh\wcm2019</span><br/><br/><span>直接從 Y 槽的根目錄, 跳進 Y:\tmp\repo\ssh\wcm2019&gt;</span><br/><br/><span>此外, 常用的 DOS 指令有:</span><br/><br/><span>dir - 列出目前所在目錄的內容</span><br/><br/><span>mkdir - 隨後加上要建立目錄的名稱, 可以建立目錄</span><br/><br/><span>cls - clear screen, 清除目前的命令列顯示的內容</span></p>
 <h2>倉儲改版</h2>
-<p>建立 Git 倉儲, 並 clone 倉儲至近端工作後, 對遠端倉儲改版<br/><br/>可攜程式系統中已經內建 git, 可以在啟動 start.bat 後, 透過 path 的設定, 直接執行 git 指令.<br/><br/>建立 Git 倉儲, 共分為兩類, 一類是直接在 Github 網際介面下建立倉儲時, 要求建立 README.md 檔案, 之後可以直接在近端, 以 git clone 加上倉儲連線 URL, 將倉儲克隆一份到近端, 並以最新版本作為工作目錄, 使用者改版後, 可以直接透過 git add, commit 與 push 對遠端倉儲改版.<br/><br/>另一類則是故意在 Github 網際介面下建立倉儲時, 不要建立任何檔案, 而是在近端自行利用 git 指令建立倉儲架構, 新增內容後, 以 git remote add 設法在近端倉儲中納入 origin URL 後, 將近端倉儲版本新增提交推送到遠端.<br/><br/>git add<br/><br/>git add 可以用來新增一個檔案, 數個檔案, 或在之前提交後所新增的所有內容.<br/><br/>git add 在 GIT 架構下, 是對所新增或修改的內容拍快照:<br/><br/>git add . adds all modified and new (untracked) files in the current directory and all subdirectories to the staging area (a.k.a. the index), thus preparing them to be included in the next git commit . Any files matching the patterns in the .gitignore file will be ignored by git add<br/><br/>git commit<span> </span><br/><br/>git commit 執行之前, 必須使用 git config 建立臨時或永久的身分註記, 因為 GIT 在展開所有改版內容時, 必須明確登錄這些變更的作者與時間.<br/><br/>當使用者採用 git commit -m "改版說明訊息", 此次提交到 .git 目錄下的更動內容, 均會綁定使用者身分與改版所輸入的說明訊息.<br/><br/>git push<br/><br/>git push 在隨後沒有輸入遠端 URL 代號時, 表示要推送到 origin, 若透過 git remote add 設定其他代號與 URL 對應時, git push 加上代號, 就可以將此次的提交內容, 推送到指定的 URL 所在遠端倉儲.</p>
+<p>建立 Git 倉儲, 並 clone 倉儲至近端工作後, 對遠端倉儲改版<br/><br/>可攜程式系統中已經內建 git, 可以在啟動 start.bat 後, 透過 path 的設定, 直接執行 git 指令.<br/><br/>建立 Git 倉儲, 共分為兩類, 一類是直接在 Github 網際介面下建立倉儲時, 要求建立 README.md 檔案, 之後可以直接在近端, 以 git clone 加上倉儲連線 URL, 將倉儲克隆一份到近端, 並以最新版本作為工作目錄, 使用者改版後, 可以直接透過 git add, commit 與 push 對遠端倉儲改版.<br/><br/>另一類則是故意在 Github 網際介面下建立倉儲時, 不要建立任何檔案, 而是在近端自行利用 git 指令建立倉儲架構, 新增內容後, 以 git remote add 設法在近端倉儲中納入 origin URL 後, 將近端倉儲版本新增提交推送到遠端.<br/><br/>git add<span style="color: #ff9900;">(在近端,無需proxy)</span><br/><br/>git add 可以用來新增一個檔案, 數個檔案, 或在之前提交後所新增的所有內容.<br/><br/>git add 在 GIT 架構下, 是對所新增或修改的內容<span style="color: #000000; background-color: #ff6600;">拍快照</span>:<br/><br/>git add . adds all modified and new (untracked) files in the current directory and all subdirectories to the staging area (a.k.a. the index), thus preparing them to be included in the next git commit . Any files matching the patterns in the .gitignore file will be ignored by git add<br/><br/>git commit<span> <span style="color: #ff9900;">(在近端,無需proxy)</span></span><br/><br/>git commit 執行之前, 必須<span style="background-color: #ff6600;">使用 git config 建立臨時或永久的身分註記</span>, 因為 GIT 在展開所有改版內容時, 必須明確登錄這些變更的作者與時間.<br/><br/>當使用者採用 git commit -m "改版說明訊息", 此次提交到 .git 目錄下的更動內容, 均會綁定使用者身分與改版所輸入的說明訊息.<br/><br/>git push<span style="color: #0000ff;">(用何協定是由倉儲" .git"內的config的url所決定的)</span><br/><br/>git push 在隨後沒有輸入遠端 URL 代號時, 表示要推送到 origin, 若透過 git remote add 設定其他代號與 URL 對應時, git push 加上代號, 就可以將此次的提交內容, 推送到指定的 URL 所在遠端倉儲.</p>
 <p><br/><br/><span>靜態 CMSimfly</span></p>
-<p>利用 CMSimfly (https://github.com/chiamingyen/cmsimfly) 內容, 建立自己的 Github Pages 網站<br/><br/>設法利用<span> </span><a href="http://mde.tw/wcm2019/content/%E5%AF%A6%E7%BF%92%E9%A0%85%E7%9B%AE%E4%B8%89.html">HTML5 CSS 與 Javascript</a>, 納入與機械設計相關的靜態網頁內容</p>
-<h1>資料來源</h1>
+<p>利用 CMSimfly (https://github.com/chiamingyen/cmsimfly) 內容, 建立自己的 Github Pages 網站<br/><br/>設法利用<span> </span><a href="http://mde.tw/wcm2019/content/%E5%AF%A6%E7%BF%92%E9%A0%85%E7%9B%AE%E4%B8%89.html">HTML5 CSS 與 Javascript</a>, 納入與機械設計相關的靜態網頁內容</p><h1>資料來源</h1>
 <p><a href="http://cpgx.kmol.info/wcm2019/content/index.html">http://cpgx.kmol.info/wcm2019/content/index.html</a></p>
 <h1>ROC Flag</h1>
 <p></p>
@@ -379,7 +379,7 @@ All rights reserved | This template is made with <i aria-hidden="true" class="ic
 <p>&lt;!--</p>
 <script src="/get_page/static/chimper/js/typed.js"></script>
 <script>
-                    var typed = new Typed('.typed-words', {
+var typed = new Typed('.typed-words', {
                     strings: ["Web Apps"," WordPress"," Mobile Apps"],
                     typeSpeed: 80,
                     backSpeed: 80,
@@ -388,5 +388,22 @@ All rights reserved | This template is made with <i aria-hidden="true" class="ic
                     loop: true,
                     showCursor: true
                     });
-                    
 </script>
+<h1>W15虎科大VPN設定</h1>
+<p>安裝完並開啟SSL VPN程式(Juniper Networks Connect<img alt="" height="192" src="/images/Network_Connect_for__64_bit__Windows__8_0R5_ydIom4NN3V.png" width="300"/></p>
+<p>點擊Network Connect</p>
+<p><img alt="" height="400" src="/images/chrome_NbmGPWyhCh.png" width="245"/></p>
+<p>執行程式後,於登入頁面輸入網址</p>
+<p><img alt="" height="364" src="/images/dsNetworkConnect_JSBOsArkPX.png" width="400"/></p>
+<p>輸入使用者帳密(填入校務行政AD及密碼)</p>
+<p><img alt="" height="364" src="/images/dsNetworkConnect_SikYrFBMLt.png" width="400"/></p>
+<p>出現"設定控制-警告"視窗,按下"是"</p>
+<p><img alt="" height="201" src="/images/JuniperSetupClient_22M9SAJYtu.png" width="300"/></p>
+<p>螢幕右下角顯示"已連接" 表示已成功連線</p>
+<p><img alt="" height="120" src="/images/h4MOLAbTJI.png" width="120"/></p>
+<p>請在IE瀏覽器上按下右鍵 使用"以系統管理員身分執行" IE網認證:在IE瀏覽器上按下右鍵 使用"以系統管理員" 登入頁面輸入： https://sslvpn9.twaren.net/nfu，按下「執行」，會出現帳號與密碼登入欄位。 填入虎尾科技大學的校務行政AD帳號及密碼，並請輸入下方驗證碼，進行身份確認。 填寫您在虎尾科技大學的校務行政AD帳號以及密碼 填寫完畢以後按下Login登入就會開始進行身份確認，請稍後一段時間。</p>
+<p><img alt="" height="400" src="/images/chrome_FmU7ubhrl6.png" width="245"/></p>
+<p><img alt="" height="225" src="/images/iexplore_LME2uV6eFW.png" width="400"/></p>
+<p><img alt="" height="207" src="/images/iexplore_O1UWqrVCsv.png" width="400"/></p>
+<p>以上的資訊皆來自<a href="https://nfucc.nfu.edu.tw/index.php/zh/download/download-network/ssl-vpn">https://nfucc.nfu.edu.tw/index.php/zh/download/download-network/ssl-vpn</a></p>
+<p><img alt="" height="217" src="/images/chrome_GjlNqvg4yY.png" width="400"/></p>
